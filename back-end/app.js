@@ -14,6 +14,7 @@ const plasmidRoutes = require("./routes/plasmids");
 const prepRoutes = require("./routes/preps");
 const puriProtRoutes = require("./routes/purifiedProteins");
 const projectRoutes = require("./routes/projects");
+const glyStockRoutes = require("./routes/glycerolStocks");
 
 const morgan = require("morgan");
 
@@ -32,6 +33,7 @@ app.use("/plasmids", plasmidRoutes);
 app.use("/preps", prepRoutes);
 app.use("/purifiedProteins", puriProtRoutes);
 app.use("/projects", projectRoutes);
+app.use("/glycerolStocks", glyStockRoutes);
 
 /** Handle 404 errors -- this matches everything */
 app.use(function (req, res, next) {

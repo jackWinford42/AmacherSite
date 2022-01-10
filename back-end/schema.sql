@@ -78,3 +78,11 @@ CREATE TABLE protocols (
   project INTEGER NOT NULL,
   FOREIGN KEY (project) REFERENCES projects ON DELETE CASCADE
 );
+
+CREATE TABLE glycerolStocks (
+  id SERIAL PRIMARY KEY,
+  plasmid_id TEXT NOT NULL,
+  plasmid_name TEXT NOT NULL,
+  number_of_tubes TEXT NOT NULL,
+  FOREIGN KEY (plasmid_id) REFERENCES plasmids ON DELETE CASCADE
+);
