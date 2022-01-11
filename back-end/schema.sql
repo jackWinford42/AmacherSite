@@ -86,3 +86,22 @@ CREATE TABLE glycerolStocks (
   number_of_tubes TEXT NOT NULL,
   FOREIGN KEY (plasmid_id) REFERENCES plasmids ON DELETE CASCADE
 );
+
+CREATE TABLE crystalTray (
+  id SERIAL PRIMARY KEY,
+  time_created TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+  added_by INTEGER,
+  green TEXT,
+  pink TEXT,
+  purple TEXT,
+  gStock TEXT,
+  piStock TEXT,
+  puStock TEXT,
+  gAOne TEXT,
+  piAOnek TEXT,
+  puAOnek TEXT,
+  gStep TEXT,
+  piStepk TEXT,
+  total_volume TEXT,
+  FOREIGN KEY (added_by) REFERENCES users ON DELETE CASADE
+);
