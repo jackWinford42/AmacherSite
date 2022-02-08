@@ -15,6 +15,7 @@ const prepRoutes = require("./routes/preps");
 const puriProtRoutes = require("./routes/purifiedProteins");
 const projectRoutes = require("./routes/projects");
 const glyStockRoutes = require("./routes/glycerolStocks");
+const trayCalcRoutes = require("./routes/trayCalc");
 
 const morgan = require("morgan");
 
@@ -34,6 +35,7 @@ app.use("/preps", prepRoutes);
 app.use("/purifiedProteins", puriProtRoutes);
 app.use("/projects", projectRoutes);
 app.use("/glycerolStocks", glyStockRoutes);
+app.use("/crystalTrays", trayCalcRoutes);
 
 /** Handle 404 errors -- this matches everything */
 app.use(function (req, res, next) {

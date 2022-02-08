@@ -81,7 +81,7 @@ CREATE TABLE protocols (
 
 CREATE TABLE glycerolStocks (
   id SERIAL PRIMARY KEY,
-  plasmid_id TEXT NOT NULL,
+  plasmid_id INTEGER,
   plasmid_name TEXT NOT NULL,
   number_of_tubes TEXT NOT NULL,
   FOREIGN KEY (plasmid_id) REFERENCES plasmids ON DELETE CASCADE
@@ -90,7 +90,7 @@ CREATE TABLE glycerolStocks (
 CREATE TABLE crystalTray (
   id SERIAL PRIMARY KEY,
   time_created TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
-  added_by INTEGER,
+  added_by TEXT,
   green TEXT,
   pink TEXT,
   purple TEXT,
@@ -103,5 +103,5 @@ CREATE TABLE crystalTray (
   gStep TEXT,
   piStepk TEXT,
   total_volume TEXT,
-  FOREIGN KEY (added_by) REFERENCES users ON DELETE CASADE
+  FOREIGN KEY (added_by) REFERENCES users ON DELETE CASCADE
 );

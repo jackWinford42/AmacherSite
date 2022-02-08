@@ -1,0 +1,2 @@
+Finish the backend for tray calculator which includes writing the formulas.
+finish formating and writing front end code for tray calculators so user can submit and save and view data.
